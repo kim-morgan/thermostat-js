@@ -1,0 +1,22 @@
+{
+  "name": "thermostat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "thermostat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kim-morgan/thermostat-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kim-morgan/thermostat-js/issues"
+  },
+  "homepage": "https://github.com/kim-morgan/thermostat-js#readme",
+  "dependencies": {
+    "jest": "^27.4.7"
+  }
+}
