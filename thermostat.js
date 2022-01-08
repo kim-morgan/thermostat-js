@@ -1,9 +1,18 @@
+const Weather = require('./weather')
+
 class Thermostat {
 
-  constructor() {
+  constructor(weather = new Weather()) {
     this.temperature = 20;
     this.maxTemperature = 25;
     this.minimumTemperature = 10;
+    this.weather = weather;
+  }
+
+  setCity(city) {
+    this.temperature = this.weather.fetchWeatherData(city, (weatherData) => {
+      return (weatherData.data.main.temp);
+    })
   }
 
   getTemperature() {

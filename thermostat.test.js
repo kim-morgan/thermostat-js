@@ -1,6 +1,11 @@
 const Thermostat = require('./thermostat')
 
-const thermostat = new Thermostat();
+const weatherDouble = { fetchWeatherData: function(city, callback) {
+  return 3.25
+  } 
+};
+
+const thermostat = new Thermostat(weatherDouble);
 
 describe("thermostat", () => {
   it("should be initialized with a temperature of 20", () => {
@@ -53,5 +58,10 @@ describe("thermostat", () => {
       thermostat.down();
     }
     expect(thermostat.getTemperature()).toBe(10);
+  })
+
+  it('should be able to set city to London', () => {
+    thermostat.setCity("London");
+    expect(thermostat.getTemperature()).toBe(3.25);
   })
 })
